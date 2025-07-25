@@ -1,134 +1,215 @@
+
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 body {
-  margin: 0;
-  font-family: system-ui, sans-serif;
+  font-family: 'Comfortaa', cursive, sans-serif;
   line-height: 1.6;
-  color: #1E1E1E; /* dark text */
-  background: #fff;
-  position: relative;
+  color: #1E1E1E;
+  background: #fafafa;
   overflow-x: hidden;
 }
 a {
   color: #DF3631;
   text-decoration: none;
 }
+.container {
+  width: min(90%, 900px);
+  margin: 0 auto;
+}
 
-/* Abstract Background Shapes */
+/* 2. DECORATIVE SHAPES */
 .shape {
   position: fixed;
-  width: 300px;
-  height: 300px;
-  opacity: 0.05;
+  width: 250px;
+  height: 250px;
+  opacity: 0.06;
   z-index: 0;
 }
 .shape--left {
-  top: 10%;
-  left: -100px;
+  top: 20%;
+  left: -80px;
   background: #FE8F1F;
   clip-path: polygon(0 0, 100% 0, 50% 100%);
 }
 .shape--right {
-  bottom: 10%;
-  right: -100px;
+  bottom: 15%;
+  right: -80px;
   background: #DF3631;
   clip-path: polygon(50% 0, 100% 100%, 0 100%);
 }
 
-/* Gears */
+/* 3. GEARS */
 .gear {
   position: fixed;
-  width: 120px;
-  height: 120px;
-  opacity: 0.1;
+  opacity: 0.08;
   pointer-events: none;
   z-index: 1;
+  transition: transform 0.1s linear;
+}
+.gear--small {
+  width: 100px;
+  height: 100px;
+}
+.gear--large {
+  width: 200px;
+  height: 200px;
+  opacity: 0.06;
 }
 .gear--left {
-  top: 25%;
+  top: 30%;
   left: 0;
 }
 .gear--right {
-  bottom: 25%;
+  bottom: 30%;
   right: 0;
 }
+.gear--bottom-left {
+  bottom: 5%;
+  left: 5%;
+}
 
-/* Header & Navigation */
+/* 4. HEADER & NAV */
 header {
   position: fixed;
   top: 0;
   width: 100%;
   background: #fff;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
   z-index: 1002;
 }
-.nav-list {
+.nav-container {
   display: flex;
-  justify-content: center;
-  list-style: none;
-  margin: 0;
-  padding: 1rem;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
 }
-.nav-list li + li {
-  margin-left: 2rem;
-}
-.nav-list a {
-  font-weight: bold;
-  color: #1E1E1E;
-}
-.nav-list a:hover,
-.nav-list a:focus {
+.logo {
+  font-size: 1.5rem;
   color: #FE8F1F;
 }
+.nav-list {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+.nav-list a {
+  font-weight: 600;
+  color: #1E1E1E;
+  position: relative;
+}
+.nav-list a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 3px;
+  background: #FE8F1F;
+  transition: width 0.3s ease;
+}
+.nav-list a:hover::after {
+  width: 100%;
+}
 
-/* Main & Sections */
+/* Offset main for fixed header */
 main {
-  padding-top: 70px; 
+  padding-top: 100px;
   position: relative;
   z-index: 1001;
 }
-section {
-  padding: 4rem 1rem;
-  max-width: 800px;
-  margin: auto;
+
+/* 5. CARD STYLE FOR SECTIONS */
+.card {
+  background: #fff;
+  margin: 2rem 0;
+  padding: 2rem;
+  border-left: 6px solid #FE8F1F;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  border-radius: 8px;
 }
-section:nth-child(even) {
-  background: #f9f9f9;
+.card:nth-child(even) {
+  border-color: #DF3631;
 }
 
-/* Typography & Accents */
-h1 {
-  font-size: 2.5rem;
-  margin-bottom: 0.5rem;
-  color: #FE8F1F;
-}
-h2 {
-  font-size: 2rem;
+/* SECTION HEADINGS */
+section h2 {
+  font-size: 1.8rem;
   margin-bottom: 1rem;
-  color: #DF3631;
-}
-h3 {
-  font-size: 1.5rem;
-  margin: 0;
   color: #1E1E1E;
 }
-p {
+section p {
   margin-bottom: 1rem;
-}
-ul {
-  margin-top: 0.5rem;
-  margin-bottom: 1rem;
-}
-.skills-list {
-  list-style: none;
-  padding: 0;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-  gap: 0.5rem;
 }
 
-/* Job item */
-.job ul {
+
+.tagline {
+  font-weight: 700;
+  color: #FE8F1F;
+  margin-bottom: 1rem;
+}
+
+
+.resume-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+.resume-block h3 {
+  font-size: 1.2rem;
+  color: #DF3631;
+  margin-bottom: 0.5rem;
+}
+.resume-block ul {
   list-style: disc inside;
+  margin-top: 0.5rem;
+}
+
+/* PROJECTS */
+#projects p {
+  font-style: italic;
+  color: #555;
+}
+
+/* SKILLS */
+.skills-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+.skills-group {
+  flex: 1;
+}
+.skills-group h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  border-bottom: 3px solid #FE8F1F;
+  display: inline-block;
+}
+.skills-group:nth-of-type(2) h3 {
+  border-color: #DF3631;
+}
+.skills-group ul {
+  list-style: none;
+}
+.skills-group li {
+  padding: 0.4rem 0;
+  position: relative;
+}
+.skills-group li::before {
+  content: '•';
+  color: #FE8F1F;
+  position: absolute;
+  left: -1rem;
+}
+
+/* CONTACT */
+#contact p {
+  margin-bottom: 0.6rem;
+}
+
+h1, h2, h3, p, li {
+  font-family: 'Comfortaa', cursive, sans-serif;
 }

@@ -3,126 +3,147 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Bernard Stavast – Full Stack Developer</title>
+  <title>Bernard Stavast – Full Stack Developer</title>
 
+  
   <link
     href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
     rel="stylesheet"
   />
 
+  <!-- Comfortaa Font -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Main Styles -->
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <!-- Decorative Shapes -->
   <div class="shape shape--left"></div>
   <div class="shape shape--right"></div>
 
-  <!-- Gears -->
+  <!-- Rotating Gears -->
   <img
     src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/icons/gear.svg"
-    class="gear gear--left"
-    alt="gear"
+    class="gear gear--small gear--left"
+    alt=""
   />
   <img
     src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/icons/gear.svg"
-    class="gear gear--right"
-    alt="gear"
+    class="gear gear--small gear--right"
+    alt=""
+  />
+  <img
+    src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/icons/gear.svg"
+    class="gear gear--large gear--bottom-left"
+    alt=""
   />
 
+  <!-- HEADER & NAVIGATION -->
   <header>
-    <nav>
-      <ul class="nav-list">
-        <li><a href="#about">About</a></li>
-        <li><a href="#resume">Resume</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
+    <div class="container nav-container">
+      <h1 class="logo">Bernard Stavast</h1>
+      <nav>
+        <ul class="nav-list">
+          <li><a href="#about">About</a></li>
+          <li><a href="#resume">Resume</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <main>
-    <!-- About -->
-    <section id="about" data-aos="fade-up">
-      <h1>Bernard Stavast</h1>
-      <h2>Full Stack Developer</h2>
+  <!-- MAIN CONTENT -->
+  <main class="container">
+    <!-- ABOUT -->
+    <section id="about" class="card" data-aos="fade-up">
+      <h2>About Me</h2>
+      <p class="tagline">Full Stack Developer</p>
       <p>
-        I’m a driven, analytical Full Stack Developer with strong
-        C#, Java, PostgreSQL, JavaScript, HTML/CSS skills. A fast learner
-        and self‑starter, I’ve built custom applications for clients—
-        providing end‑to‑end development and ongoing support. Patient and
-        detail‑oriented, I thrive working independently and am eager to pursue opportunities abroad.
+        I’m a driven, analytical developer with expertise in C#, Java,
+        PostgreSQL, JavaScript, HTML/CSS. A fast learner and self‑starter,
+        I build custom applications end‑to‑end and provide ongoing support.
+        I thrive working independently and am eager for international roles.
       </p>
     </section>
 
-    <!-- Resume -->
-    <section id="resume" data-aos="fade-up">
-      <h2>Education</h2>
-      <p>
-        <strong>B.Sc. Information Technology</strong>, North West
-        University, Potchefstroom<br />
-        2021–Present (final semester)
-      </p>
-      <h2>Experience</h2>
-      <div class="job">
-        <h3>Full Stack Developer</h3>
-        <p><em>Autofficiency, Sandton, Gauteng</em> | Aug 2024–Present</p>
-        <ul>
-          <li>Develop bespoke applications to suit client needs.</li>
-          <li>Conduct client meetings to assess requirements and propose solutions.</li>
-          <li>Provide ongoing support and training.</li>
-        </ul>
+    <!-- RESUME -->
+    <section id="resume" class="card" data-aos="fade-up">
+      <h2>Resume</h2>
+      <div class="resume-grid">
+        <div class="resume-block">
+          <h3>Education</h3>
+          <p>
+            <strong>B.Sc. Information Technology</strong><br/>
+            North West University, Potchefstroom<br/>
+            <em>2021 – Present (final semester)</em>
+          </p>
+        </div>
+        <div class="resume-block">
+          <h3>Experience</h3>
+          <p>
+            <strong>Full Stack Developer</strong><br/>
+            Autofficiency, Sandton, Gauteng<br/>
+            <em>Aug 2024 – Present</em>
+          </p>
+          <ul>
+            <li>Develop bespoke client applications.</li>
+            <li>Lead requirements meetings & proposals.</li>
+            <li>Provide ongoing training & support.</li>
+          </ul>
+        </div>
       </div>
     </section>
 
-    <!-- Projects -->
-    <section id="projects" data-aos="fade-up">
+    <!-- PROJECTS -->
+    <section id="projects" class="card" data-aos="fade-up">
       <h2>Projects</h2>
-      <p>No personal projects yet—keep an eye on my GitHub for updates!</p>
+      <p>No personal repos yet—check my GitHub for upcoming work!</p>
     </section>
 
-    <!-- Skills -->
-    <section id="skills" data-aos="fade-up">
-      <h2>Technical Skills</h2>
-      <ul class="skills-list">
-        <li>C#</li>
-        <li>Java</li>
-        <li>PostgreSQL</li>
-        <li>JavaScript</li>
-        <li>HTML &amp; CSS</li>
-      </ul>
-      <h2>Soft Skills</h2>
-      <ul class="skills-list">
-        <li>Communication</li>
-        <li>Time Management</li>
-        <li>Self-Starter</li>
-        <li>Analytical Thinking</li>
-      </ul>
+    <!-- SKILLS -->
+    <section id="skills" class="card" data-aos="fade-up">
+      <h2>Skills</h2>
+      <div class="skills-wrap">
+        <div class="skills-group">
+          <h3>Technical</h3>
+          <ul>
+            <li>C#</li>
+            <li>Java</li>
+            <li>PostgreSQL</li>
+            <li>JavaScript</li>
+            <li>HTML &amp; CSS</li>
+          </ul>
+        </div>
+        <div class="skills-group">
+          <h3>Soft</h3>
+          <ul>
+            <li>Communication</li>
+            <li>Time Management</li>
+            <li>Self‑Initiative</li>
+            <li>Analytical Thinking</li>
+          </ul>
+        </div>
+      </div>
     </section>
 
-    <!-- Contact -->
-    <section id="contact" data-aos="fade-up">
+    <!-- CONTACT -->
+    <section id="contact" class="card" data-aos="fade-up">
       <h2>Contact</h2>
-      <p>
-        Email:
-        <a href="mailto:bernardstavast@gmail.com">bernardstavast@gmail.com</a>
-      </p>
+      <p>Email: <a href="mailto:bernardstavast@gmail.com">bernardstavast@gmail.com</a></p>
       <p>Location: Centurion, Gauteng, South Africa</p>
-      <p>
-        GitHub:
-        <a href="https://github.com/Bernard1906">github.com/Bernard1906</a>
-      </p>
-      <p>
-        LinkedIn:
-        <a href="https://linkedin.com/in/bernard-stavast"
-          >linkedin.com/in/bernard-stavast</a
-        >
-      </p>
+      <p>GitHub: <a href="https://github.com/Bernard1906">github.com/Bernard1906</a></p>
+      <p>LinkedIn: <a href="https://linkedin.com/in/bernard-stavast">linkedin.com/in/bernard-stavast</a></p>
     </section>
   </main>
 
-
+  
   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-
   <script src="script.js"></script>
 </body>
 </html>
