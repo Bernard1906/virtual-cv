@@ -1,1 +1,90 @@
+/* Base & Reset */
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Header & Navigation */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #fff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  z-index: 1000;
+}
+.nav-list {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 1rem;
+}
+.nav-list li + li {
+  margin-left: 2rem;
+}
+.nav-list a:hover {
+  text-decoration: underline;
+}
+
+/* Main & Sections */
+main {
+  padding-top: 70px; 
+}
+section {
+  padding: 4rem 1rem;
+  max-width: 800px;
+  margin: auto;
+}
+section:nth-child(even) {
+  background: #f9f9f9;
+}
+
+/* Typography */
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+h3 {
+  font-size: 1.5rem;
+  margin: 0;
+}
+p {
+  margin-bottom: 1rem;
+}
+ul {
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+.skills-list {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 0.5rem;
+}
+
+/* Job item */
+.job ul {
+  list-style: disc inside;
+}
+
+/* Contact links */
+#contact a {
+  color: #0066cc;
+  font-weight: bold;
+}
 
